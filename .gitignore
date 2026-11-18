@@ -1,0 +1,11 @@
+node_modules
+dist
+test-results
+playwright-report
+.playwright
+.playwright-cli
+.vercel
+.env*
+.claude/settings.local.json
+*.log
+video (stock animation).mp4
