@@ -1,6 +1,7 @@
 ﻿import { motion } from 'motion/react';
 import { Droplets, Waves, Zap } from 'lucide-react';
 import { T, type Lang } from '../data/i18n';
+import ShaderBackground from './ui/shader-background';
 
 export default function HeroSection({ lang, onBook }: { lang: Lang; onBook: () => void }) {
   const t = T[lang];
@@ -20,6 +21,7 @@ export default function HeroSection({ lang, onBook }: { lang: Lang; onBook: () =
         fetchPriority="high"
         className="absolute inset-0 -z-20 h-full w-full object-cover"
       />
+      <ShaderBackground className="-z-10 opacity-60 mix-blend-screen" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-pine-950 via-pine-950/60 to-pine-950/20" />
       <div className="mx-auto w-full max-w-7xl px-4 pb-10 pt-24">
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-3xl">
